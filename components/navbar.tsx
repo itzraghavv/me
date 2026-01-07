@@ -13,6 +13,10 @@ const navItems = [
     href: "#projects",
   },
   {
+    label: "skills",
+    href: "/",
+  },
+  {
     label: "contact",
     href: "#contact",
   },
@@ -20,16 +24,18 @@ const navItems = [
 
 export const Navbar = () => {
   return (
-    <div className="sticky top-0 z-20 rounded-md py-4 backdrop-blur-sm flex items-center justify-between px-4">
-      Raghav
+    <nav className="sticky top-0 z-20 border-b border-muted-foreground/50 py-4 backdrop-blur-sm flex items-center justify-between my-2 px-2">
+      <h1 className="hover:cursor-pointer">
+        <Link href="/">raghavv</Link>
+      </h1>
       <div className="flex items-center justify-center gap-x-4">
         {navItems.map((item, key) => (
           <Link className="" key={key} href={item.href}>
             {item.label}
           </Link>
         ))}
-      <ThemeToggle />
+        <ThemeToggle />
       </div>
-    </div>
+    </nav>
   );
 };
