@@ -1,4 +1,5 @@
 import { PaperclipIcon, SendIcon } from "lucide-react";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -27,10 +28,12 @@ export const Hero = () => {
           <PaperclipIcon className="size-4 " />
           Resume
         </button>
-        <button className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2">
-          <SendIcon className="size-4 " />
-          Get in touch
-        </button>
+        <Link href="#contact">
+          <button className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2">
+            <SendIcon className="size-4 " />
+            Get in touch
+          </button>
+        </Link>
       </div>
     </div>
   );
