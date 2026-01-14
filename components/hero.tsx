@@ -22,6 +22,8 @@ export const Hero = () => {
         engineer.
       </p>
 
+      <p>Open to collaborations and opportunities. Feel free to reach out!</p>
+
       {/* add links */}
       <div className="flex items-center space-x-4 text-sm  py-4">
         <button className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2">
