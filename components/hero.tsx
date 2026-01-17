@@ -12,11 +12,13 @@ export const Hero = () => {
         I&apos;m a developer who enjoys understanding how things work — from UI
         interactions to backend systems and data flow.
         <br />
-        With experience across React, Next.js, TypeScript, Node.js, Prisma,
-        PostgreSQL, and Supabase, I build full-stack applications that are
-        clean, scalable, and easy to maintain. I value good architecture,
-        readable code, and solving problems the right way, not just the fastest
-        way.
+        With experience across{" "}
+        <span className="font-medium underline underline-offset-2">
+          React, Next.js, TypeScript, JavaScript and Go
+        </span>
+        , I build full-stack applications that are clean, scalable, and easy to
+        maintain. I value good architecture, readable code, and solving problems
+        the right way, not just the fastest way.
         <br />
         I&apos;m driven by curiosity and a constant desire to improve as an
         engineer.
@@ -26,10 +28,12 @@ export const Hero = () => {
 
       {/* add links */}
       <div className="flex items-center space-x-4 text-sm  py-4">
-        <button className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2">
-          <PaperclipIcon className="size-4 " />
-          Resume
-        </button>
+        <Link href="https://drive.google.com/file/d/1RkM9ujmxl9DZq-TwJg0BOFje1eYpSWvq/view?usp=sharing">
+          <button className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2">
+            <PaperclipIcon className="size-4 " />
+            Resume
+          </button>
+        </Link>
         <Link href="#contact">
           <button className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2">
             <SendIcon className="size-4 " />

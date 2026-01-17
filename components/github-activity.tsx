@@ -1,11 +1,6 @@
 import { getGithubData } from "@/lib/data/github";
 import { ActivityCalendar, ThemeInput } from "react-activity-calendar";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 type ActivityData = {
   date: string;
@@ -29,11 +24,6 @@ type GithubApiResponse = {
   totalContribution: number;
 };
 
-const explicitTheme: ThemeInput = {
-  light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"],
-  dark: ["#383838", "#4D455D", "#7DB9B6", "#F5E9CF", "#E96479"],
-};
-
 const githubData: GithubApiResponse = await getGithubData();
 
 const levelMap = {
@@ -51,6 +41,11 @@ function mapGithubToActivityData(apiData: GithubApiResponse): ActivityData[] {
     level: levelMap[day.contributionLevel],
   }));
 }
+
+const theme: ThemeInput = {
+  light: ["#F8FAFC", "#E2E8F0", "#22C55E", "#16A34A", "#0F172A"],
+  dark: ["#020617", "#0F172A", "#064E3B", "#047857", "#22C55E"],
+};
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {
@@ -74,7 +69,7 @@ export const GithubActivity = async () => {
             </span>
           </h3>
 
-          <div className="mt-4 overflow-x-auto">
+          <div className="mt-4">
             <TooltipProvider delayDuration={150}>
               <ActivityCalendar
                 data={activityData}
@@ -82,6 +77,7 @@ export const GithubActivity = async () => {
                 blockMargin={4}
                 fontSize={14}
                 weekStart={1}
+                // theme={theme}
                 // renderBlock={(block, activity) => (
                 //     <Tooltip>
                 //       <TooltipTrigger asChild>{block}</TooltipTrigger>
