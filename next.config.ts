@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "ghchart.rshah.org",
+        hostname: "github-contributions-api.deno.dev",
       },
     ],
   },

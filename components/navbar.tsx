@@ -29,11 +29,11 @@ export const Navbar = () => {
         <Link href="/">raghavv</Link>
       </h1>
       <div className="flex items-center justify-center gap-x-4">
-        {navItems.map((item, key) => (
+        {/* {navItems.map((item, key) => (
           <Link className="" key={key} href={item.href}>
             {item.label}
           </Link>
-        ))}
+        ))} */}
         <ThemeToggle />
       </div>
     </nav>

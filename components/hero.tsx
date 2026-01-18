@@ -1,5 +1,7 @@
-import { PaperclipIcon, SendIcon } from "lucide-react";
+import { PaperclipIcon } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { Socials } from "./social-badges";
 
 export const Hero = () => {
   return (
@@ -20,26 +22,29 @@ export const Hero = () => {
         maintain. I value good architecture, readable code, and solving problems
         the right way, not just the fastest way.
         <br />
-        I&apos;m driven by curiosity and a constant desire to improve as an
-        engineer.
       </p>
 
-      <p>Open to collaborations and opportunities. Feel free to reach out!</p>
+      <p className="py-3">
+        Open to collaborations and opportunities. Feel free to reach out!
+      </p>
 
-      {/* add links */}
       <div className="flex items-center space-x-4 text-sm  py-4">
         <Link href="https://drive.google.com/file/d/1RkM9ujmxl9DZq-TwJg0BOFje1eYpSWvq/view?usp=sharing">
-          <button className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2">
+          <Button
+            variant="outline"
+            className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2"
+          >
             <PaperclipIcon className="size-4 " />
             Resume
-          </button>
+          </Button>
         </Link>
-        <Link href="#contact">
-          <button className="flex items-center justify-center gap-x-2 hover:cursor-pointer rounded-md py-2 px-4 border-2">
-            <SendIcon className="size-4 " />
-            Get in touch
-          </button>
-        </Link>
+      </div>
+
+      <div>
+        <p className="font-medium text-lg tracking-tight scroll-m-20 pb-2">
+          Connect With Me:
+        </p>
+        <Socials />
       </div>
     </div>
   );

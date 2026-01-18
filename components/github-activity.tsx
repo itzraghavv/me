@@ -60,46 +60,44 @@ const activityData = mapGithubToActivityData(githubData);
 export const GithubActivity = async () => {
   return (
     <>
-      <div className="relative rounded-2xl p-px bg-linear-to-br from-emerald-500/40 via-transparent to-indigo-500/40">
-        <div className="rounded-2xl bg-background p-6 transition hover:shadow-xl">
-          <h3 className="text-lg font-semibold flex items-center gap-2">
-            GitHub Activity
-            <span className="text-xs text-muted-foreground">
-              (Last 12 months)
-            </span>
-          </h3>
-
-          <div className="mt-4">
-            <TooltipProvider delayDuration={150}>
-              <ActivityCalendar
-                data={activityData}
-                blockSize={12}
-                blockMargin={4}
-                fontSize={14}
-                weekStart={1}
-                // theme={theme}
-                // renderBlock={(block, activity) => (
-                //     <Tooltip>
-                //       <TooltipTrigger asChild>{block}</TooltipTrigger>
-                //       <TooltipContent side="top" align="center">
-                //         <div className="text-sm">
-                //           <div className="font-medium">
-                //             {activity.count} contributions
-                //           </div>
-                //           <div className="text-muted-foreground">
-                //             {formatDate(activity.date)}
-                //           </div>
-                //         </div>
-                //       </TooltipContent>
-                //     </Tooltip>
-                //   )}
-                // theme={explicitTheme}
-                // loading
-              />
-            </TooltipProvider>
+      <section className="py-16">
+        <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight border-b pb-2">
+          Github Activity
+        </h2>
+        <div className="relative rounded-2xl p-px bg-linear-to-br from-emerald-500/40 via-transparent to-indigo-500/40  my-4">
+          <div className="rounded-2xl bg-background p-6 transition hover:shadow-xl">
+            <div className="mt-4">
+              <TooltipProvider delayDuration={150}>
+                <ActivityCalendar
+                  data={activityData}
+                  blockSize={12}
+                  blockMargin={4}
+                  fontSize={14}
+                  weekStart={1}
+                  // theme={theme}
+                  // renderBlock={(block, activity) => (
+                  //     <Tooltip>
+                  //       <TooltipTrigger asChild>{block}</TooltipTrigger>
+                  //       <TooltipContent side="top" align="center">
+                  //         <div className="text-sm">
+                  //           <div className="font-medium">
+                  //             {activity.count} contributions
+                  //           </div>
+                  //           <div className="text-muted-foreground">
+                  //             {formatDate(activity.date)}
+                  //           </div>
+                  //         </div>
+                  //       </TooltipContent>
+                  //     </Tooltip>
+                  //   )}
+                  // theme={explicitTheme}
+                  // loading
+                />
+              </TooltipProvider>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

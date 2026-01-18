@@ -1,4 +1,3 @@
-import ContactMe from "@/components/contact-me";
 import Footer from "@/components/footer";
 import { GithubActivity } from "@/components/github-activity";
 import { Hero } from "@/components/hero";
@@ -14,7 +13,6 @@ export default function Home() {
       <ProjectsSection />
       <SkillsSection />
       <GithubActivity />
-      <ContactMe />
       <Footer />
     </div>
   );
